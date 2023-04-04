@@ -1,4 +1,3 @@
-console.log("Hola mundo")
 const usuarios=[]
 
 const formularioRegistro=document.querySelector(".form")
@@ -12,8 +11,7 @@ const renderizarUsuarios= ()=>{
     <h2>Nombre: ${usuario.nombre}</h2>
     <p>Email: <strong>${usuario.email}</strong></p>
     <p>Contraseña: <strong>${usuario.contrasena}</strong></p> 
-    </div>
-    `
+    </div> `
   }
 }
 
