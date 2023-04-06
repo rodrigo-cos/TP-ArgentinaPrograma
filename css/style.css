@@ -18,7 +18,7 @@ h1 {
 h2{
     font-family: 'Poppins', sans-serif;
     font-size: 35px;
-    color:rgb(235, 234, 234);
+    color:rgb(77, 73, 73);
 }
 nav a{
     color: rgba(10, 11, 11, 0.89);
@@ -46,7 +46,7 @@ header {
     border-radius: 5px;
     margin-left: 20px;
     margin-right: 20px;
-    box-shadow: 0px 3px 7px black;
+    box-shadow: 0px 3px 7px rgb(37, 37, 37);
 } 
 nav {
     display: flex;
@@ -61,6 +61,8 @@ nav {
     margin-left: 3vw;
     margin-top: 3vh; 
     margin-right: 2vw;
+    border-radius: 5px;
+    
 }
 .caja{
     background-color: rgba(113, 63, 194, 0.713);
@@ -71,7 +73,8 @@ nav {
     margin-left: 2vw;
     padding: 2vh 2vw;
     word-spacing: 2px;
-    box-shadow: 0px 5px 5px;
+    box-shadow: 0px 5px 5px rgb(37, 37, 37);
+    
 }
 .laEmpresa h2{
     color: hsla(147, 12%, 15%, 0.753);
@@ -148,6 +151,32 @@ h1 {
         background-color: white;     
         color: rgba(124, 61, 196, 0.418);     
         border: 0.5px rgb(56, 53, 53) solid; 
+}
+.card-usuario
+{
+ display: flex;
+ align-items: center;
+ gap: 5vw;
+ width: 100%;
+ border-radius: 5px;
+ background-color: rgb(44, 43, 43);
+ color: white;
+ padding: 10px;
+ border: 1px black solid;
+}
+.card-usuario:hover
+{
+    transition: 1s ease-in-out;
+    background-color: white;
+    color: black;
+    border: 1px black solid;
+}
+.contenedorUsuarios
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
 }
 
 footer{
