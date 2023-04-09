@@ -1,0 +1,27 @@
+[
+    {
+        "name":"motorhome-sobre-chasis",
+        "price":5000000,
+        "marca":"ford",
+        "color":"white"
+    },
+    {
+        "name":"motorhome-sobre-furgones",
+        "price":4500000,
+        "marca":"renault",
+        "color":"white"
+    },
+    {
+        "name":"casa-rodante-de-tiro",
+        "price":1500000,
+        "marca":"pebarbus",
+        "color":"white"
+    },
+    {
+        "name":"mini-casa-rodante-de-tiro",
+        "price":900000,
+        "marca":"start",
+        "color":"white"
+    }
+
+]
