@@ -3,25 +3,29 @@
         "name":"motorhome-sobre-chasis",
         "price":5000000,
         "marca":"ford",
-        "color":"white"
+        "color":"white",
+        "img":"https://dtngh3spc2o8h.cloudfront.net/picture/df4e88e0-aa51-4b87-a691-11550e959a89_1679152891?w=560&h=300&fit=crop"
     },
     {
         "name":"motorhome-sobre-furgones",
         "price":4500000,
         "marca":"renault",
-        "color":"white"
+        "color":"white",
+        "img":"https://imagenes.cordobavende.com/motorhome-oncativo-equipamiento-renault-master-sprinter-8958977-1.jpg"
     },
     {
         "name":"casa-rodante-de-tiro",
         "price":1500000,
         "marca":"pebarbus",
-        "color":"white"
+        "color":"white",
+        "img":"https://www.airelibredigital.com/resized/680x510/notas/incio-nota-pbarbus.jpg"
     },
     {
         "name":"mini-casa-rodante-de-tiro",
         "price":900000,
         "marca":"start",
-        "color":"white"
+        "color":"white",
+        "img":"https://http2.mlstatic.com/D_NQ_NP_997404-MLC44456920856_122020-W.jpg"
     }
 
 ]

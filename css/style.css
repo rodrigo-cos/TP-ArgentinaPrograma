@@ -293,3 +293,18 @@ footer{
     text-decoration: none;
     color: #3498db;
 }
+.card-container2
+{
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display:flex;
+    /*flex-wrap: wrap;*/
+    justify-content: center;
+    margin: auto;
+}
+.card-container2 img
+{
+    width: 330px;
+    height: 220px;
+}

@@ -14,6 +14,7 @@ fetch("../json/database.json")
     <p>Price:${producto.price}</p>
     <span>Marca:${producto.marca}</span>
     <span class="${producto.color}color-disponible"></span>
+    <img src=${producto.img}>
 
     </div>
     `
