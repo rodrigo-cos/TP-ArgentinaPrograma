@@ -4,12 +4,13 @@ const URL_API="https://swapi.dev.api/"
 
 fetch("../json/database.json")
  .then(response=>response.json())
-/*.then(data =>console.log(data))*/
+
  .then(data=>{
   for(const producto of data)
   {
     contenedorProducto.innerHTML +=`
     <div>
+    <h2>${producto.id}</h2>
     <h2>${producto.name}</h2>
     <p>Price:${producto.price}</p>
     <span>Marca:${producto.marca}</span>
@@ -21,7 +22,77 @@ fetch("../json/database.json")
   }
 })
 
-const usuarios=[]
+const nombre=document.getElementById("nombre")
+const email=document.getElementById("email")
+const contrasena=document.getElementById("contrasena")
+const form=document.getElementById("form")
+const parrafo=document.getElementById("warnings")
+
+function enviarFormulario()
+{
+  form.reset();
+  form.lastElementChild.innerHTML="El formulario fue enviado éxitosamente";
+}
+
+form.addEventListener("submit",e=>{
+  e.preventDefault()
+  let warnings=""
+  let entrar=false
+  let regexEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
+  parrafo.innerHTML=""
+  
+  if(nombre.value.length<3)
+  {
+    warnings+=`el nombre no es válido <br>`
+    entrar=true
+  }
+  /*console.log(regexEmail.test(email.value))*/
+ if(!regexEmail.test(email.value)){
+    warnings+=`el email no es válido <br>`
+    entrar=true
+  }
+  if(contrasena.value.length<6)
+  {
+    warnings+=`contraseña no válida`
+    entrar=true
+  }
+  if(entrar)
+  {
+    parrafo.innerHTML=warnings
+  }
+  if(entrar==false)
+  {
+    enviarFormulario()
+  }
+})
+
+
+
+
+
+/*fetch("../json/database.json")
+.then(function(response){
+  return response.json();
+})
+.then(function(database)
+{
+  let placeholder =document.querySelector("#data-output");
+  let out="";
+  for(let databases of database)
+  {
+           out+=`
+           <tr>
+           <td><img src='${databases.image}></img></td>
+           <td>${databases.name}</td>
+           <td>${database.marca} </td>
+           </tr>
+           `;
+  }
+
+})*/
+
+
+/*const usuarios=[]
 
 const formularioRegistro=document.querySelector(".form")
 const contenedorHTML= document.querySelector("#contenedorUsuarios")
@@ -36,6 +107,7 @@ const renderizarUsuarios= ()=>{
     <p>Email:<strong>${usuario.email}</strong></p>
     <p>Teléfono:<stong>${usuario.telefono} </p>
     <p>Contraseña: <strong>${usuario.contrasena}</strong></p> 
+    <p>Tu mensaje:${usuario.mensaje}</p>
     <button class="btn-eliminar" id="btn-eliminar-${usuario.id}">X</button>
     </div> `
   }
@@ -60,11 +132,12 @@ formularioRegistro.addEventListener("submit",(event)=>{
         email: formularioRegistro.correoElectronico.value,
         contrasena:formularioRegistro.contrasena.value,
         telefono:formularioRegistro.telefono.value,
+        mensaje:formularioRegistro.mensaje.value,
         id: contadorId++
     })
     formularioRegistro.reset()
     renderizarUsuarios()
     
  
-})
+})*/
 
