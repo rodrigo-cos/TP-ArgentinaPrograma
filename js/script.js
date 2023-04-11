@@ -25,6 +25,7 @@ fetch("../json/database.json")
 const nombre=document.getElementById("nombre")
 const email=document.getElementById("email")
 const contrasena=document.getElementById("contrasena")
+const telefono=document.getElementById("telefono")
 const form=document.getElementById("form")
 const parrafo=document.getElementById("warnings")
 
@@ -43,17 +44,22 @@ form.addEventListener("submit",e=>{
   
   if(nombre.value.length<3)
   {
-    warnings+=`el nombre no es válido <br>`
+    warnings+=`El nombre no es válido <br>`
     entrar=true
   }
   /*console.log(regexEmail.test(email.value))*/
  if(!regexEmail.test(email.value)){
-    warnings+=`el email no es válido <br>`
+    warnings+=`El email no es válido <br>`
     entrar=true
   }
-  if(contrasena.value.length<6)
+  if(contrasena.value.length<7)
   {
-    warnings+=`contraseña no válida`
+    warnings+=`La contraseña debe ser mayo a 7 carácteres<br>`
+    entrar=true
+  }
+  if(telefono.value.length<8)
+  {
+    warnings+=`El telefono debe tener más de 8 caracteres`
     entrar=true
   }
   if(entrar)
@@ -65,10 +71,6 @@ form.addEventListener("submit",e=>{
     enviarFormulario()
   }
 })
-
-
-
-
 
 /*fetch("../json/database.json")
 .then(function(response){
