@@ -54,7 +54,7 @@ form.addEventListener("submit",e=>{
   }
   if(contrasena.value.length<7)
   {
-    warnings+=`La contraseña debe ser mayo a 7 carácteres<br>`
+    warnings+=`La contraseña debe ser mayor a 7 carácteres<br>`
     entrar=true
   }
   if(telefono.value.length<8)
