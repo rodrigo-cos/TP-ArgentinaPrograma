@@ -3,7 +3,7 @@
         "id":1,
         "name":"motorhome sobre chasis",
         "price":5000000,
-        "marca":"ford",
+        "marca":"Ford",
         "color":"white",
         "img":"https://dtngh3spc2o8h.cloudfront.net/picture/df4e88e0-aa51-4b87-a691-11550e959a89_1679152891?w=560&h=300&fit=crop"
     },
@@ -11,7 +11,7 @@
         "id":2,
         "name":"motorhome sobre furgones",
         "price":4500000,
-        "marca":"renault",
+        "marca":"Renault",
         "color":"white",
         "img":"https://imagenes.cordobavende.com/motorhome-oncativo-equipamiento-renault-master-sprinter-8958977-1.jpg"
     },
@@ -19,7 +19,7 @@
         "id":3,
         "name":"casa rodante de tiro",
         "price":1500000,
-        "marca":"pebarbus",
+        "marca":"Pebarbus",
         "color":"white",
         "img":"https://www.airelibredigital.com/resized/680x510/notas/incio-nota-pbarbus.jpg"
     },
@@ -27,9 +27,26 @@
         "id":4,
         "name":"mini casa rodante de tiro",
         "price":900000,
-        "marca":"start",
+        "marca":"Start",
         "color":"white",
         "img":"https://http2.mlstatic.com/D_NQ_NP_997404-MLC44456920856_122020-W.jpg"
+    },
+    {
+        "id":5,
+        "name":"motorhome sobre chasis",
+        "price":6000000,
+        "marca":"Iveco",
+        "color":"blue",
+        "img":"https://i.pinimg.com/736x/0a/c6/f0/0ac6f05e24aa22d0af55fc01273d8179--motorhome-x.jpg"
+    },
+    {
+        "id":1,
+        "name":"motorhome sobre chasis",
+        "price":5000000,
+        "marca":"Mercedez benz",
+        "color":"golden",
+        "img":"https://www.transportecarretero.com.uy/media/zoo/images/Sprinter_Motorhome_7_b727caca7426ae0a97c3fc4b8d569d48.jpg"
     }
+
 
 ]

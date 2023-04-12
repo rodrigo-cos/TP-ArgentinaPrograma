@@ -1,8 +1,47 @@
+const DB_ROUTE="../json/database.json"
+
+const products=[]
+
 const contenedorProducto=document.getElementById("contenedorProducto")
 
-const URL_API="https://swapi.dev.api/"
+const renderProducts=()=>{
+  for(const product of products)
+  {
+    contenedorProducto.innerHTML+=`
+    <div class="card3">
+              <button class="favorite-button">
+              <i class="bi bi-bag-check-fill"></i>
+              <button>
+              <img src="${product.img}" alt="">
+              <div class="card-info"> 
+                <div class="nameContainer">Descripción:
+                <h3>${product.name}</h3></div>
+                <div class="priceContainer">Precio:
+                <h3>$${product.price}</h3>
+                </div>
+                <div class="colorContainer">Color:
+                <h3>${product.color}</h3></div>
+                <div class="marcaContainer"> Marca: <h3>${product.marca}</h3></div>
 
-fetch("../json/database.json")
+              </div>
+    </div>          
+    `
+  }
+}
+
+/*const URL_API="https://swapi.dev.api/"*/
+
+fetch(DB_ROUTE)
+.then(res => res.json())
+.then(data=> {
+  for(const product of data)
+  {
+    products.push(product)
+  }
+  renderProducts()
+})
+
+/*fetch(DB_ROUTE)
  .then(response=>response.json())
 
  .then(data=>{
@@ -20,7 +59,8 @@ fetch("../json/database.json")
     </div>
     `
   }
-})
+  renderProducts()
+})*/
 
 const nombre=document.getElementById("nombre")
 const email=document.getElementById("email")
@@ -32,7 +72,7 @@ const parrafo=document.getElementById("warnings")
 function enviarFormulario()
 {
   form.reset();
-  form.lastElementChild.innerHTML="El formulario fue enviado éxitosamente";
+  form.lastElementChild.innerHTML="<b>El formulario fue enviado éxitosamente</b>";
 }
 
 form.addEventListener("submit",e=>{
@@ -44,22 +84,22 @@ form.addEventListener("submit",e=>{
   
   if(nombre.value.length<3)
   {
-    warnings+=`El nombre no es válido <br>`
+    warnings+=`<b>El nombre no es válido</b><br>`
     entrar=true
   }
   /*console.log(regexEmail.test(email.value))*/
  if(!regexEmail.test(email.value)){
-    warnings+=`El email no es válido <br>`
+    warnings+=`<b>El email no es válido </b><br>`
     entrar=true
   }
   if(contrasena.value.length<7)
   {
-    warnings+=`La contraseña debe ser mayor a 7 carácteres<br>`
+    warnings+=`<b>La contraseña debe ser mayor a 7 carácteres</b><br>`
     entrar=true
   }
   if(telefono.value.length<8)
   {
-    warnings+=`El telefono debe tener más de 8 caracteres`
+    warnings+=`<b>El telefono debe tener más de 8 caracteres</b>`
     entrar=true
   }
   if(entrar)
