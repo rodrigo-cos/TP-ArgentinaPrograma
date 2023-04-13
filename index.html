@@ -13,12 +13,16 @@
 <body>
     <header>
         <h1>Ambiance Diseño<i class="bi bi-hurricane"></i></h1>
-        <nav>
-            <a href="">Home</a>
-            <a href="#laEmpresa">Sobre nosotros</a>
-            <a href="producto/producto.html">Productos</a>
-            <a href="contacto/contacto.html">Contacto</a>
-            </nav>
+        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+        <nav class="nav" id="nav">
+            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+            <ul class="nav-list">
+            <li><a href="">Home</a></li>
+            <li><a href="#laEmpresa">Sobre nosotros</a></li>
+            <li><a href="producto/producto.html">Productos</a></li>
+            <li><a href="contacto/contacto.html">Contacto</a></li>
+        </ul>
+        </nav>
     </header>
     <main>
         <section class="hero"> 
@@ -88,5 +92,6 @@
         </div>
     </footer>
     <script src="./js/script.js"></script>
+    <script src="./js/scriptMenu.js"></script>
 </body>
 </html>

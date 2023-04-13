@@ -1,7 +1,5 @@
 const DB_ROUTE="../json/database.json"
-
 const products=[]
-
 const contenedorProducto=document.getElementById("contenedorProducto")
 
 const renderProducts=()=>{
@@ -29,7 +27,6 @@ const renderProducts=()=>{
   }
 }
 
-/*const URL_API="https://swapi.dev.api/"*/
 
 fetch(DB_ROUTE)
 .then(res => res.json())
@@ -41,26 +38,6 @@ fetch(DB_ROUTE)
   renderProducts()
 })
 
-/*fetch(DB_ROUTE)
- .then(response=>response.json())
-
- .then(data=>{
-  for(const producto of data)
-  {
-    contenedorProducto.innerHTML +=`
-    <div>
-    <h2>${producto.id}</h2>
-    <h2>${producto.name}</h2>
-    <p>Price:${producto.price}</p>
-    <span>Marca:${producto.marca}</span>
-    <span class="${producto.color}color-disponible"></span>
-    <img src=${producto.img}>
-
-    </div>
-    `
-  }
-  renderProducts()
-})*/
 
 const nombre=document.getElementById("nombre")
 const email=document.getElementById("email")
@@ -111,6 +88,8 @@ form.addEventListener("submit",e=>{
     enviarFormulario()
   }
 })
+
+
 
 /*fetch("../json/database.json")
 .then(function(response){
